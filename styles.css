@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.ModalSpeech {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+
+}
+
+.ModalSpeech .SpeechContainer {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.ModalSpeech .SpeechContainer .SpeechContent {
+    width: 55%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ModalSpeech .SpeechContainer .SpeechContent #SpeechResult{
+    color: rgb(37, 46, 111);
+}
+
+.ModalSpeech .SpeechContainer .SpeechIcon {
+    position: relative;
+    width: 35%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+
+.ModalSpeech .SpeechContainer .SpeechIcon .SpeechIconFrame {
+    position: absolute;
+    width: 65%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle();
+    background-color: rgba(209, 10, 27, 0.785);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.ModalSpeech .SpeechContainer .SpeechIcon .SpeechIconFrame.animate{
+    animation: boundIconFrame 1.2s ease-in-out infinite;
+    transition: 0.5s ease-in-out;
+    /* background-color: rgb(219, 211, 239); */
+}
+
+@keyframes boundIconFrame {
+    50% {
+        transform: scale(1.10);
+        transition: 0.5s ease-in-out;
+        background-color: rgba(209, 10, 27, 0.231);
+    }
+}
+
+.ModalSpeech .SpeechContainer .SpeechIcon .Icon {
+    position: absolute;
+    font-size: 55px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .ModalSpeech .SpeechContainer {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .ModalSpeech .SpeechContainer .SpeechContent {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .ModalSpeech .SpeechContainer .SpeechContent #SpeechResult{
+        font-size: 24px;
+    }
+
+    .ModalSpeech .SpeechContainer .SpeechIcon {
+        width: 100%;
+
+    }
+
+    .ModalSpeech .SpeechContainer .SpeechIcon .SpeechIconFrame {
+        width: 85%;
+        height: 85%;
+
+    }
+}
